@@ -4,7 +4,7 @@ import DrawerItem from '@/components/UI/DrawerItem.vue'
 import store from '@/store/store.js'
 import { defineEmits, ref } from 'vue'
 import axios from 'axios'
-import MyButton from '@/components/UI/AppButton.vue'
+import AppButton from '@/components/UI/AppButton.vue'
 
 const props = defineProps({
   show: {
@@ -60,7 +60,7 @@ const setOrder = async () => {
       >
         <h2>Вы успешно оформили заказ. ID {{ idOrder }}</h2>
         <router-link to="/orders">
-          <MyButton class="drawer__info-button" @click="closeDrawer">Перейти к заказам</MyButton>
+          <AppButton class="drawer__info-button" @click="closeDrawer">Перейти к заказам</AppButton>
         </router-link>
       </div>
       <div class="drawer__info" v-else-if="store.state.basketStore.productsInBasket.length === 0">

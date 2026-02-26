@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import MyHeader from '@/components/landings/AppHeader.vue'
+import AppHeader from '@/components/landings/AppHeader.vue'
 import Drawer from '@/components/UI/AppDrawer.vue'
 import Modal from '@/components/UI/AppModal.vue'
 import LoginModal from '@/components/Auth/LoginModal.vue'
@@ -20,7 +20,7 @@ const showDrawer = () => {
 <template>
   <div id="app">
     <div class="container">
-      <MyHeader @show-login-modal="showLoginModal" @show-drawer="showDrawer" />
+      <AppHeader @show-login-modal="showLoginModal" @show-drawer="showDrawer" />
       <router-view></router-view>
       <Modal v-model:show="modalLoginVisible">
         <LoginModal />
